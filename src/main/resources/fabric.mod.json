@@ -6,7 +6,8 @@
   "description": "ArtificeSMP DNA System",
   "authors": [],
   "contact": {},
-  "license": "All-Rights-Reserved",
+  "license": "GPL-3.0",
+  "icon": "assets/asmp_dna/textures/item/dna.png",
   "environment": "*",
   "entrypoints": {
     "main": [
