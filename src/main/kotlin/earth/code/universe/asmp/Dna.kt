@@ -57,7 +57,7 @@ class Dna : ModInitializer {
                                     val elevatedSource = source.withPermission(4).withSuppressedOutput()
                                     commandsExecutor.performPrefixedCommand(elevatedSource, runCommand)
 
-                                    source.sendSystemMessage(Component.literal("Granted 1 DNA to $target."))
+                                    source.sendSystemMessage(Component.literal("Granted 1 DNA Point to $target."))
                                     1
                                 }
                                 .then(
@@ -81,7 +81,7 @@ class Dna : ModInitializer {
                                 val elevatedSource = source.withPermission(4).withSuppressedOutput()
                                 commandsExecutor.performPrefixedCommand(elevatedSource, runCommand)
 
-                                source.sendSystemMessage(Component.literal("Granted $points DNA to $target."))
+                                source.sendSystemMessage(Component.literal("Granted $points DNA Points to $target."))
                                 1
                             })
                         )
@@ -126,8 +126,8 @@ class Dna : ModInitializer {
 
 
 
-                                            source.sendSystemMessage(Component.literal("You gave 1 DNA to ${target.scoreboardName}."))
-                                            target.sendSystemMessage(Component.literal("You received 1 DNA from ${source.player?.scoreboardName}."))
+                                            source.sendSystemMessage(Component.literal("You gave 1 DNA Points to ${target.scoreboardName}."))
+                                            target.sendSystemMessage(Component.literal("You received 1 DNA Points from ${source.player?.scoreboardName}."))
                                         }
                                         else {
                                             source.sendSystemMessage(Component.literal("You don't have any dna left."))
@@ -171,8 +171,8 @@ class Dna : ModInitializer {
                                                 )
                                             }
 
-                                            source.sendSystemMessage(Component.literal("You gave $points DNA to ${target.scoreboardName}."))
-                                            target.sendSystemMessage(Component.literal("You received $points DNA from ${source.player?.scoreboardName}"))
+                                            source.sendSystemMessage(Component.literal("You gave $points DNA Points to ${target.scoreboardName}."))
+                                            target.sendSystemMessage(Component.literal("You received $points DNA Points from ${source.player?.scoreboardName}"))
                                         }
                                         else {
                                             source.sendSystemMessage(Component.literal("You don't have enough dna left."))
