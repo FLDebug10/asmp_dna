@@ -262,7 +262,7 @@ class Dna : ModInitializer {
                                                         )
                                                     }
 
-                                                    source.sendSystemMessage(Component.literal("Converted $points DNA Points into a Helices."))
+                                                    source.sendSystemMessage(Component.literal("Converted $points DNA Points into Helices."))
                                                 }
                                                 else {
                                                     source.sendSystemMessage(Component.literal("You don't have enough DNA left."))
@@ -298,7 +298,7 @@ class Dna : ModInitializer {
 
                     commandExecutor.performPrefixedCommand(elevatedSource, runCommand)
 
-                    player.createCommandSourceStack().sendSystemMessage(Component.literal("Gained $dna DNA Points from Helices."))
+                    player.createCommandSourceStack().sendSystemMessage(Component.literal("Gained $dna DNA Points from consuming the Helices."))
                 }
                 else {
                     player.getItemInHand(hand).count--
@@ -310,7 +310,7 @@ class Dna : ModInitializer {
 
                     commandExecutor.performPrefixedCommand(elevatedSource, runCommand)
 
-                    player.createCommandSourceStack().sendSystemMessage(Component.literal("Gained 1 DNA Point from the Helix."))
+                    player.createCommandSourceStack().sendSystemMessage(Component.literal("Gained 1 DNA Point from consuming the Helix."))
                 }
             }
 
