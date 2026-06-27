@@ -9,6 +9,7 @@
 - DNA Helix drops when player is killed by player, removing 1 from the DNA scoreboard.
 
 ## Dependencies:
+- Fabric >= 0.19.3
 - Fabric API
 - Fabric Lang. Kotlin >= 1.13.12+kotlin.2.4.0
 - Minecraft 1.20.1
