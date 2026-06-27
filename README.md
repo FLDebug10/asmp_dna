@@ -5,8 +5,8 @@
   - /dna change Player DNA(Default=1)
   - /dna pay Player DNA(Default=1)
   - /dna item Player DNA(Default=1)
-- DNA Helix Item (immune to fire)
-- DNA Helix drops when player is killed by player, removing 1 from the DNA scoreboard.
+- DNA Helix Item (immune to fire) which grant 1 DNA each on right click
+- 1 DNA Helix drops when a player is killed by a player, removing 1 from the DNA scoreboard
 
 ## Dependencies:
 - Fabric >= 0.19.3
