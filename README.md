@@ -13,3 +13,4 @@
 - Fabric API
 - Fabric Lang. Kotlin >= 1.13.12+kotlin.2.4.0
 - Minecraft 1.20.1
+- Origins >= 1.10.2+mc.1.20.1 (only for 1.1.0-alpha-1 or higher)
