@@ -46,6 +46,47 @@ repositories {
     // Loom adds the essential maven repositories to download Minecraft and libraries from automatically.
     // See https://docs.gradle.org/current/userguide/declaring_repositories.html
     // for more information about repositories.
+    maven {
+        name = "Ladysnake Libs"
+        url = uri("https://maven.ladysnake.org/releases")
+    }
+
+    maven {
+        url = uri("https://maven.cafeteria.dev")
+        content {
+            includeGroup("net.adriantodt.fabricmc")
+        }
+    }
+
+    maven {
+        url = uri("https://maven.jamieswhiteshirt.com/libs-release")
+        content {
+            includeGroup("com.jamieswhiteshirt")
+        }
+    }
+
+    maven {
+        url = uri("https://jitpack.io")
+    }
+
+    maven {
+        url = uri("https://maven.shedaniel.me/")
+    }
+
+    maven {
+        url = uri("https://maven.terraformersmc.com/")
+    }
+    maven("https://api.modrinth.com/maven") {
+        content {
+            includeGroup("maven.modrinth")
+        }
+    }
+
+    maven("https://maven.bawnorton.com/releases") {
+        content {
+            includeGroup("com.github.bawnorton.mixinsquared")
+        }
+    }
 }
 
 dependencies {
@@ -56,6 +97,7 @@ dependencies {
     modImplementation("net.fabricmc:fabric-language-kotlin:${project.property("kotlin_loader_version")}")
 
     modImplementation("net.fabricmc.fabric-api:fabric-api:${project.property("fabric_version")}")
+    modImplementation("io.github.apace100:origins-fabric:1.10.2+mc.1.20.x")
 }
 
 tasks.processResources {
