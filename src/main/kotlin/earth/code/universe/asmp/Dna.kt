@@ -23,7 +23,6 @@ import net.minecraft.world.item.ItemStack
 import net.minecraft.world.item.Rarity
 import net.minecraft.world.level.Level
 import org.slf4j.LoggerFactory
-import kotlin.math.log
 
 
 class Dna : ModInitializer {
@@ -45,9 +44,8 @@ class Dna : ModInitializer {
         CommandRegistrationCallback.EVENT.register { dispatcher, registryAccess, env ->
             dispatcher.register(
                 literal("dna")
-                    .requires { source -> source.hasPermission(2) }
                     .then(
-                        literal("change").then(
+                        literal("change").requires { source -> source.hasPermission(2) }.then(
                             argument("Player", EntityArgument.player())
                                 .executes { context ->
                                     val source = context.source
@@ -289,6 +287,7 @@ class Dna : ModInitializer {
                             )
                     .then(
                         literal("clear")
+                            .requires { source -> source.hasPermission(2) }
                             .then(
                                 argument("Player", EntityArgument.player())
                                     .executes { context ->
